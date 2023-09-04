@@ -71,11 +71,12 @@ public class WallPostImpl implements WallPost {
 	 * Cambia el post del estado destacado a no destacado y viceversa
 	 */
 	public void toggleFeatured() {
-		if (featured) {
-			featured = false;
-		}else {
-			featured = true;
-		}
+		featured= !featured;
+//		if (featured) {
+//			featured = false;
+//		}else {
+//			featured = true;
+//		}
 	};
 	
 	
