@@ -18,8 +18,22 @@ public class Farola {
 	receptor del mensaje
 	*/
 	public void pairWithNeighbor( Farola otraFarola ) {
-		neighbors.add(otraFarola);
-		otraFarola.getNeighbors().add(this);
+//		neighbors.add(otraFarola);
+//		if (!otraFarola.getNeighbors().contains(this)) {
+//			otraFarola.pairWithNeighbor(this);
+//		}
+		
+		if (!neighbors.contains(otraFarola)) { 
+			this.agregarFarola(otraFarola);
+			otraFarola.agregarFarola(this);
+		}
+		
+		// otraFarola.pairWithNeighbor(otraFarola); ?????????
+		// otraFarola.getNeighbors().add(this);
+	}
+	
+	public void agregarFarola(Farola unaFarola) { 
+		this.neighbors.add(unaFarola);
 	}
 	/*
 	* Retorna sus farolas vecinas
